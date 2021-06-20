@@ -1,0 +1,9 @@
+Во второй задаче можно было обойтись только sub, вообще без findall:
+
+def remove_repeats(string):
+   return re.sub(r"(\w+)(\s\1)+", r"\1", string)
+
+А в 3 задаче так же можно было использовать функцию sub и скобочные группы, чтобы обойтись без цикла:
+
+def acronym(word):
+   return re.sub(r"(\w)\w+\s?", r"\1", word).upper()
